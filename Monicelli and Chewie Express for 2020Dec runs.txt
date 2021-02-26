@@ -1,4 +1,4 @@
-// How to use Monicelli and Chewie Express for December 2020 runs
+// How to use Monicelli and Chewie Express for 2020Dec and 2021Feb runs
 
 // Make sure the xml geometry file used during this process has a good alignment results.
 // Likewise the runs should have similar testing conditions and a good status, you can verify in the RunLog (google excel sheet)
@@ -14,6 +14,7 @@ source setup2020December.sh
 cd Express
 
 // run one of the following python commands (using your own runs) depending on the number and state of runs, 
+// Note: Use mkexpressscript.py intead of mkexpressscript_Dec2020.py for 2021Feb runs
 python mkexpressscript_Dec2020.py 32173 --xml Run32173.xml       // for run 32173 only
 python mkexpressscript_Dec2020.py 32172 32174 --xml Run32173.xml // for all runs from 32172-32174
 python mkexpressscript_Dec2020.py 32172 32176 --skip "32174,32175" --xml Run32173.xml // for all runs from 32172-32176 except some of them 
@@ -30,6 +31,7 @@ source setup2020December.sh
 cd Express
 
 // run one of the following python commands (using your own runs) depending on the number and state of runs,
+// Note: Use mkexpressblockscript.py intead of mkexpressblockscript_Dec2020.py for 2021Feb runs
 python mkexpressblockscript_Dec2020.py 32173       // for run 32173 only
 python mkexpressblockscript_Dec2020.py 32172 32174 // for all runs from 32172-32174
 python mkexpressblockscript_Dec2020.py 32172 32176 --skip "32174,32175" // for all runs from 32172-32176 except some of them 
