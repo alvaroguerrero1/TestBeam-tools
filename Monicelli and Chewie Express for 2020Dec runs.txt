@@ -1,0 +1,37 @@
+// How to use Monicelli and Chewie Express for December 2020 runs
+
+//MONICELLI EXPRESS
+// Go to teddy computer
+kinit user_name@FNAL.GOV
+ssh -Y otsdaq@teddy01.dhcp.fnal.gov
+
+// Go to Monicelli folder
+cd /home/otsdaq/TestBeamAnalysis_T992/Monicelli
+source setup2020December.sh
+cd Express
+
+// run one of the following python commands depending on the number and state of runs, 
+python mkexpressscript_Dec2020.py 32173 --xml Run32173.xml       // for run 32173 only
+python mkexpressscript_Dec2020.py 32172 32174 --xml Run32173.xml // for all runs from 32172-32174
+python mkexpressscript_Dec2020.py 32172 32176 --skip "32174,32175" --xml Run32173.xml // for all runs from 32172-32176 except some of them 
+
+// then, you'll get a script that you should run again, for example:
+./expressscriptXtoY.sh 
+// this should take a while to run! if it finishes quickly, check the log files in ExpressLogs/ to see if there was an issue
+
+
+//CHEWIE EXPRESS
+// Go to Chewie folder
+cd /home/otsdaq/TestBeamAnalysis_T992/Chewie
+source setup2020December.sh
+cd Express
+
+// run one of the following python commands depending on the number and state of runs,
+python mkexpressblockscript_Dec2020.py 32173       // for run 32173 only
+python mkexpressblockscript_Dec2020.py 32172 32174 // for all runs from 32172-32174
+python mkexpressblockscript_Dec2020.py 32172 32176 --skip "32174,32175" // for all runs from 32172-32176 except some of them 
+
+// then, you'll get a script that you should run again, for example:
+./expressscriptXtoY.sh 
+// this should take a while to run! if it finishes quickly, check the log files in ExpressLogs/ to see if there was an issue
+
