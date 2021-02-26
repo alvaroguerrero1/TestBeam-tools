@@ -1,5 +1,8 @@
 // How to use Monicelli and Chewie Express for December 2020 runs
 
+// Make sure the xml geometry file used during this process has a good alignment results.
+// Likewise the runs should have similar testing conditions and a good status, you can verify in the RunLog (google excel sheet)
+
 //MONICELLI EXPRESS
 // Go to teddy computer
 kinit user_name@FNAL.GOV
