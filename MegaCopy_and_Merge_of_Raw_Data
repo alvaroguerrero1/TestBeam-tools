@@ -2,7 +2,7 @@
 
 #1) MegaCopy
 # Go to this address on teddy01:
-cd /data/TestBeam/2021_02_February_T992
+cd /data/TestBeam/2021_02_February_T992     #this script works for February, you should choice the appropiate folder
 ./megaCopy.csh run_number
 
 2) Merger
