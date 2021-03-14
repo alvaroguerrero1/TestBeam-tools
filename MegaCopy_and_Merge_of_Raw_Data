@@ -1,0 +1,15 @@
+#To convert raw runs just to be uploaded on Monicelli, do these 2 steps:
+
+#1) MegaCopy
+# Go to this address on teddy01:
+cd /data/TestBeam/2021_02_February_T992
+./megaCopy.csh run_number
+
+2) Merger
+# Go to this address on teddy01:
+cd /home/otsdaq/TestBeamAnalysis_T992/Merger
+source setup.sh
+cd build/
+./Merger run_number
+
+Note: If you get an error related to “permission denied”, you should "kinit" again
